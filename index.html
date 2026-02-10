@@ -9,12 +9,38 @@
 <body>
   <header>
     <h1>Lewis Muithya's Travel Log</h1>
-    <p>Click on a place to see details:</p>
+    <p>Click on a place to see details or add a new one:</p>
   </header>
 
   <main>
-    <ul id="places-list"></ul>
-    <div id="place-details"></div>
+    <section>
+      <h2>Visited Places</h2>
+      <ul id="places-list"></ul>
+      <div id="place-details"></div>
+    </section>
+
+    <section>
+      <h2>Add a New Place</h2>
+      <form id="place-form">
+        <label>
+          Location:
+          <input type="text" id="location" required>
+        </label>
+        <label>
+          Landmarks (comma separated):
+          <input type="text" id="landmarks" required>
+        </label>
+        <label>
+          Time of Year:
+          <input type="text" id="timeOfYear" required>
+        </label>
+        <label>
+          Notes:
+          <textarea id="notes" required></textarea>
+        </label>
+        <button type="submit">Add Place</button>
+      </form>
+    </section>
   </main>
 
   <footer>
