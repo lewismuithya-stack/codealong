@@ -34,6 +34,9 @@ function renderPlaces() {
     li.textContent = place.location;
     li.addEventListener("click", () => {
       details.textContent = place.summary();
+      details.classList.remove("show");
+      void details.offsetWidth;
+      details.classList.add("show");
     });
     list.appendChild(li);
   });
