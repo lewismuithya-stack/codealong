@@ -42,3 +42,6 @@ A sleek, interactive travel log web app built with **HTML, CSS, and JavaScript**
    ```bash
    git clone https://github.com/lewismuithya-stack/codealong.git
 
+## Deployment
+This project is deployed using **GitHub Pages**.  
+Live site: [https://lewismuithya-stack.github.io/codealong/](https://lewismuithya-stack.github.io/codealong/)
