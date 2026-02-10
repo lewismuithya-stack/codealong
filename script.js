@@ -1,0 +1,36 @@
+function Place(location, landmarks, timeOfYear, notes) {
+  this.location = location;
+  this.landmarks = landmarks;
+  this.timeOfYear = timeOfYear;
+  this.notes = notes;
+}
+
+Place.prototype.landmarkList = function() {
+  return this.landmarks.join(", ");
+};
+
+Place.prototype.summary = function() {
+  return `${this.location} (${this.timeOfYear})
+Landmarks: ${this.landmarkList()}
+Notes: ${this.notes}`;
+};
+
+const places = [
+  new Place("France", ["Eiffel Tower", "Louvre Museum"], "Spring", "Enjoyed the art and culture."),
+  new Place("Dubai", ["Burj Khalifa", "Palm Jumeirah"], "Winter", "Loved the modern architecture."),
+  new Place("Singapore", ["Marina Bay Sands", "Gardens by the Bay"], "Summer", "Clean city with amazing food."),
+  new Place("Zanzibar", ["Stone Town", "Nungwi Beach"], "Autumn", "Relaxed on beautiful beaches."),
+  new Place("Switzerland", ["Matterhorn", "Lake Geneva"], "Winter", "Breathtaking mountain views.")
+];
+
+const list = document.getElementById("places-list");
+const details = document.getElementById("place-details");
+
+places.forEach((place) => {
+  const li = document.createElement("li");
+  li.textContent = place.location;
+  li.addEventListener("click", () => {
+    details.textContent = place.summary();
+  });
+  list.appendChild(li);
+});
